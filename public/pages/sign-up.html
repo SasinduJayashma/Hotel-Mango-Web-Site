@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <style>
+    html,
+    body {
+        height: 100%;
+    }
+
+    body {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-performance.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-functions.js"></script>
+</head>
+<!-- ============================================================== -->
+<!-- signup form  -->
+<!-- ============================================================== -->
+
+<body>
+    <!-- ============================================================== -->
+    <!-- signup form  -->
+    <!-- ============================================================== -->
+
+    <div class="splash-container">
+        <div class="card ">
+            <div class="card-header text-center">
+                
+                <a href="../index.html"><img class="logo-img" src="../../assets/images/logo.png" alt="logo"></a>
+                <h3 class="mb-1">Registrations Form</h3>
+                <p>Please enter your user information.</p>
+
+            </div>
+
+            <div class="card-body">
+                 
+            </div>
+
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="name" placeholder="Name" type="text" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="email" placeholder="Email" type="text" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="pass1" type="password" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" id="pass2" type="password" placeholder="Coonfirm  Password">
+                    </div>
+                    <input type="button" name="submit" id="submitSignin" class="btn btn-primary btn-lg btn-block" onclick="accountCreation()" value="Register My Account"></input>
+                    <div class="form-group">
+                        <label class="custom-control custom-checkbox">
+                            <input class="custom-control-input" type="checkbox"><span class="custom-control-label">By creating an account, you agree the <a href="#">terms and conditions</a></span>
+                        </label>
+                    </div>
+                </form>    
+            </div>
+            <center>
+                <span class="" id="signup_spinner"></span>
+            </center>
+            <div class="card-footer bg-white">
+                <p>Already member? <a href="login.html" class="text-secondary">Login Here.</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8.15.3/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script src="assets/libs/js/main-js.js"></script>
+
+    <script>
+        // var firebaseConfig = {
+        //     apiKey: "AIzaSyAkpiQUO0e5CZkNyIv64lmKK13106YHIIk",
+        //     authDomain: "project-qless-selfcheckout.firebaseapp.com",
+        //     databaseURL: "https://project-qless-selfcheckout.firebaseio.com",
+        //     projectId: "project-qless-selfcheckout",
+        //     storageBucket: "project-qless-selfcheckout.appspot.com",
+        //     messagingSenderId: "868031304142",
+        //     appId: "1:868031304142:web:d4236af48afa23ee1e1b9f",
+        //     measurementId: "G-7L1FVSKL3G"
+        // };
+
+        var firebaseConfig = {
+            apiKey: "AIzaSyA8NYZcHLnXbg2or3HRamArU7Ud5izp6TE",
+            authDomain: "hotel-mango.firebaseapp.com",
+            projectId: "hotel-mango",
+            storageBucket: "hotel-mango.appspot.com",
+            messagingSenderId: "745696424787",
+            appId: "1:745696424787:web:51178f1e998ad4a666a7a6",
+            measurementId: "G-8E8F14JR3T"
+            };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+    </script>
+
+    <script src="../js/login.js"></script>
+</body>
+
+ 
+</html>
